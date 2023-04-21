@@ -2,7 +2,7 @@ import mongoose from 'mongoose'
 
 const Schema = mongoose.Schema
 
-const championSchema = new Schema({
+const roleSchema = new Schema({
   name: String,
   description: String,
   owner: { type: Schema.Types.ObjectId, ref: 'Profile' },
@@ -10,8 +10,8 @@ const championSchema = new Schema({
   timestamps: true,
 })
 
-const Champion = mongoose.model('Champion', championSchema)
+const Role = mongoose.model('Role', roleSchema)
 
 export {
-  Champion
+  Role
 }
