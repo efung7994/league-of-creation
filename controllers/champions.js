@@ -24,14 +24,13 @@ function newChampion(req, res) {
 
 function create(req, res) {
   req.body.owner = req.user.profile._id
-  req.body.tasty = !!req.body.tasty
   Champion.create(req.body)
   .then(champion => {
     res.redirect(`/champions/${champion._id}`)
   })
   .catch(err => {
     console.log(err)
-    res.redirect('/')
+    res.redirect('/champions/new')
   })
 }
 
