@@ -4,8 +4,9 @@ import { isLoggedIn } from '../middleware/middleware.js'
 
 const router = Router()
 
-// GET localhost:3000/tacos
 router.get('/', championsCtrl.index)
+router.get('/new', championsCtrl.new)
+router.post('/', isLoggedIn, championsCtrl.create)
 
 export {
   router

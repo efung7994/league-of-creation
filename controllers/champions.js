@@ -16,6 +16,27 @@ function index(req, res) {
   })
 }
 
+function newChampion(req, res) {
+  res.render('champions/new', {
+    title: 'Add Champion'
+  })
+}
+
+function create(req, res) {
+  req.body.owner = req.user.profile._id
+  req.body.tasty = !!req.body.tasty
+  Champion.create(req.body)
+  .then(champion => {
+    res.redirect(`/champions/${champion._id}`)
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
 export {
-  index
+  index,
+  create,
+  newChampion as new,
 }
