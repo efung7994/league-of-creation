@@ -4,12 +4,7 @@ const Schema = mongoose.Schema
 
 const championSchema = new Schema({
   name: String,
-  passive: String,
-  ability1: String,
-  ability2: String,
-  ability3: String,
-  ultimate: String,
-  role: [{type: Schema.Types.ObjectId, ref: 'Roles'}],
+  description: String,
   owner: { type: Schema.Types.ObjectId, ref: 'Profile' },
 }, {
   timestamps: true,
