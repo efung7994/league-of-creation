@@ -34,8 +34,24 @@ function create(req, res) {
   })
 }
 
+function show(req, res) {
+  Champion.findById(req.params.championId)
+  .populate('owner')
+  .then(champion => {
+    res.render('champions/show', {
+      champion,
+      title: 'Show Champion'
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
 export {
   index,
   create,
   newChampion as new,
+  show
 }

@@ -1,0 +1,24 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<section>
+  <img src="<%= champion.owner.avatar %>" alt="<%= champion.owner.name %>'s avatar">
+  <h1><%= champion.name %></h1>
+  <p>Created by <%= champion.owner.name %></p>
+  <p>Passive: <%= champion.passive %></p>
+  <p>Q: <%= champion.ability1 %></p>
+  <p>W: <%= champion.ability2 %></p>
+  <p>E: <%= champion.ability3 %></p>
+  <p>R: <%= champion.ultimate %></p>
+
+  <% if (champion.owner.equals(user?.profile._id)) { %>
+    <a href="/champions/<%= champion._id %>/edit">
+      <button class="btn">Edit this champion!</button>
+    </a>
+    <form action="/champions/<%= champion._id %>?_method=DELETE" method="POST">
+      <button class="delete">Delete this champion</button>
+    </form>
+  <% } %>
+</section>
+
+<%- include('../partials/footer') %>

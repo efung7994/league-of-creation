@@ -6,6 +6,7 @@ const router = Router()
 
 router.get('/', championsCtrl.index)
 router.get('/new', isLoggedIn, championsCtrl.new)
+router.get('/:championId', championsCtrl.show)
 router.post('/', isLoggedIn, championsCtrl.create)
 
 export {
