@@ -1,12 +1,12 @@
 import { Profile } from '../models/profile.js'
 
-function index(req, res) {
+function index(req, res, next) {
   Profile.find({})
   .then(profiles => {
     res.render('profiles', {
       profiles,
 			title: "Profile",
-      user: user
+      user: req.user
     })
   })
   .catch(err => {
