@@ -1,0 +1,20 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<section>
+  <img src="<%= role.owner.avatar %>" alt="<%= role.owner.name %>'s avatar">
+  <h1><%= role.name %></h1>
+  <p>Created by <a href="/profiles/<%= role.owner._id %>"><%= role.owner.name %></a></p>
+  <p>Description: <%= role.description %></p>
+
+  <% if (role.owner.equals(user?.profile._id)) { %>
+    <a href="/roles/<%= role._id %>/edit">
+      <button class="btn">Edit this role!</button>
+    </a>
+    <form action="/roles/<%= role._id %>?_method=DELETE" method="POST">
+      <button class="delete">Delete this role</button>
+    </form>
+  <% } %>
+</section>
+
+<%- include('../partials/footer') %>

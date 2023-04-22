@@ -34,8 +34,24 @@ function create(req, res) {
   })
 }
 
+function show(req, res) {
+  Role.findById(req.params.roleId)
+  .populate('owner')
+  .then(role => {
+    res.render('roles/show', {
+      role,
+      title: 'Show Role'
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
 export {
   index,
   create,
   newRole as new,
+  show,
 }

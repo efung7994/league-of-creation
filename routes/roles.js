@@ -6,6 +6,7 @@ const router = Router()
 
 router.get('/', rolesCtrl.index)
 router.get('/new', isLoggedIn, rolesCtrl.new)
+router.get('/:roleId', rolesCtrl.show)
 router.post('/', isLoggedIn, rolesCtrl.create)
 
 export {

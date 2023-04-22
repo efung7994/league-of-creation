@@ -6,7 +6,7 @@
   <ul>
     <% champions.forEach(champion => { %>
       <li>
-        <a href="/champions/<%= champion._id %>"><%= champion.name %><%= champion.role[0] %></a>
+        <a href="/champions/<%= champion._id %>"><%= champion.name %><%= champion.role %></a>
       </li>
     <% }) %>
   </ul>
