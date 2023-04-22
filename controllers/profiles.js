@@ -15,6 +15,21 @@ function index(req, res, next) {
   })
 }
 
+function show(req, res) {
+  Profile.findById(req.params.profileId)
+  .then(profile => {
+    res.render('profiles/show', {
+      profile,
+      title: 'Show Profile'
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
 export {
-  index
+  index,
+  show,
 }
