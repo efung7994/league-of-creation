@@ -7,7 +7,9 @@ const router = Router()
 router.get('/', championsCtrl.index)
 router.get('/new', isLoggedIn, championsCtrl.new)
 router.get('/:championId', championsCtrl.show)
+router.get('/:championId/edit', isLoggedIn, championsCtrl.edit)
 router.post('/', isLoggedIn, championsCtrl.create)
+router.put('/:championId', championsCtrl.update)
 
 export {
   router

@@ -49,9 +49,43 @@ function show(req, res) {
   })
 }
 
+function edit(req, res) {
+  Champion.findById(req.params.championId)
+  .then(champion => {
+    res.render('champions/edit', {
+      champion,
+      title: "Edit champion"
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
+function update(req, res) {
+  Champion.findById(req.params.championId)
+  .then(champion => {
+    if (champion.owner.equals(req.user.profile._id)) {
+      champion.updateOne(req.body)
+      .then(()=> {
+        res.redirect('/champions')
+      })
+    } else {
+      throw new Error('NOT AUTHORIZED')
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
 export {
   index,
   create,
   newChampion as new,
-  show
+  show,
+  edit,
+  update,
 }

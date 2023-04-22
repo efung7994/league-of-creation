@@ -1,0 +1,23 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<section>
+  <h1>Edit Champion</h1>
+  <form id="new-form" action="/champions/<%= champion._id %>?_method=PUT" method="POST">
+    <label for="name-input">Name:</label>
+    <input type="text" name="name" id="name-input">
+    <label for="passive-input">Passive:</label>
+    <textarea name="passive" id="passive-input"></textarea>
+    <label for="ability1-input">Q:</label>
+    <textarea name="ability1" id="ability1-input"></textarea>
+    <label for="ability2-input">W:</label>
+    <textarea name="ability2" id="ability2-input"></textarea>
+    <label for="ability3-input">E:</label>
+    <textarea name="ability3" id="ability3-input"></textarea>
+    <label for="ultimate-input">Ultimate:</label>
+    <textarea name="ultimate" id="ultimate-input"></textarea>
+    <button type="submit">Save Champion</button>
+  </form>
+</section>
+
+<%- include('../partials/footer') %>
