@@ -19,6 +19,14 @@
       </li>
     <% }) %>
   </ul>
+  <h1>Roles</h1>
+  <ul>
+    <% profile.roles.forEach(role => { %>
+      <li>
+        <a href="/roles/<%= role._id %>"><%= role.name %></a>
+      </li>
+    <% }) %>
+  </ul>
 </section>
 
 <%- include('../partials/footer') %>
