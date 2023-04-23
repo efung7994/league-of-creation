@@ -81,6 +81,24 @@ function update(req, res) {
   })
 }
 
+function deleteRole(req, res) {
+  Role.findById(req.params.roleId)
+  .then(role => {
+    if (role.owner.equals(req.user.profile._id)) {
+      role.deleteOne()
+      .then(() => {
+        res.redirect('/roles')
+      })
+    } else {
+      throw new Error('NOT AUTHORIZED')
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
 export {
   index,
   create,
@@ -88,4 +106,5 @@ export {
   show,
   edit,
   update,
+  deleteRole as delete,
 }
