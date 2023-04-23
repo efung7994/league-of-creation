@@ -124,7 +124,6 @@ function deleteChampion(req, res) {
 }
 
 function addToRoles(req, res) {
-  //find the movie by id
   Champion.findById(req.params.championId)
   .then(champion => {
     champion.roles.push(req.body.roleId)
