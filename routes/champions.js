@@ -9,7 +9,8 @@ router.get('/new', isLoggedIn, championsCtrl.new)
 router.get('/:championId', championsCtrl.show)
 router.get('/:championId/edit', isLoggedIn, championsCtrl.edit)
 router.post('/', isLoggedIn, championsCtrl.create)
-router.put('/:championId', championsCtrl.update)
+router.put('/:championId', isLoggedIn, championsCtrl.update)
+router.delete('/:championId', isLoggedIn, championsCtrl.delete)
 
 export {
   router

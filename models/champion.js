@@ -9,7 +9,7 @@ const championSchema = new Schema({
   ability2: String,
   ability3: String,
   ultimate: String,
-  role: [{type: Schema.Types.ObjectId, ref: 'Roles'}],
+  roles: [{type: Schema.Types.ObjectId, ref: 'Role'}],
   owner: { type: Schema.Types.ObjectId, ref: 'Profile' },
 }, {
   timestamps: true,

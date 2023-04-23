@@ -5,17 +5,17 @@
   <h1>Edit Champion</h1>
   <form id="new-form" action="/champions/<%= champion._id %>?_method=PUT" method="POST">
     <label for="name-input">Name:</label>
-    <input type="text" name="name" id="name-input">
+    <input type="text" name="name" id="name-input" value="<%= champion.name %>">
     <label for="passive-input">Passive:</label>
-    <textarea name="passive" id="passive-input"></textarea>
+    <textarea name="passive" id="passive-input"><%= champion.passive %></textarea>
     <label for="ability1-input">Q:</label>
-    <textarea name="ability1" id="ability1-input"></textarea>
+    <textarea name="ability1" id="ability1-input"><%= champion.ability1 %></textarea>
     <label for="ability2-input">W:</label>
-    <textarea name="ability2" id="ability2-input"></textarea>
+    <textarea name="ability2" id="ability2-input"><%= champion.ability2 %></textarea>
     <label for="ability3-input">E:</label>
-    <textarea name="ability3" id="ability3-input"></textarea>
+    <textarea name="ability3" id="ability3-input"><%= champion.ability3 %></textarea>
     <label for="ultimate-input">Ultimate:</label>
-    <textarea name="ultimate" id="ultimate-input"></textarea>
+    <textarea name="ultimate" id="ultimate-input"><%= champion.ultimate %></textarea>
     <button type="submit">Save Champion</button>
   </form>
 </section>

@@ -10,5 +10,15 @@
       />
     </div>
 </main>
+<section>
+  <h1>Champions</h1>
+  <ul>
+    <% profile.champions.forEach(champion => { %>
+      <li>
+        <a href="/champions/<%= champion._id %>"><%= champion.name %></a>
+      </li>
+    <% }) %>
+  </ul>
+</section>
 
 <%- include('../partials/footer') %>

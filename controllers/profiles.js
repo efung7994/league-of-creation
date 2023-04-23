@@ -1,4 +1,5 @@
 import { Profile } from '../models/profile.js'
+import { Champion } from "../models/champion.js"
 
 function index(req, res, next) {
   Profile.find({})
@@ -6,7 +7,6 @@ function index(req, res, next) {
     res.render('profiles', {
       profiles,
 			title: "Profile",
-      user: req.user
     })
   })
   .catch(err => {
@@ -17,12 +17,14 @@ function index(req, res, next) {
 
 function show(req, res) {
   Profile.findById(req.params.profileId)
+  .populate('champions')
   .then(profile => {
     res.render('profiles/show', {
       profile,
       title: 'Show Profile'
     })
   })
+  Champion.findById()
   .catch(err => {
     console.log(err)
     res.redirect('/')

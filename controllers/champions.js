@@ -1,10 +1,10 @@
 import { Champion } from "../models/champion.js"
+import { Profile } from '../models/profile.js'
 
 function index(req, res) {
   Champion.find({})
   .populate('owner')
   .then(champions => {
-    console.log(champions);
     res.render('champions/index', {
       champions,
       title: "Champions"
@@ -26,11 +26,26 @@ function create(req, res) {
   req.body.owner = req.user.profile._id
   Champion.create(req.body)
   .then(champion => {
-    res.redirect(`/champions/${champion._id}`)
+    Profile.findById(req.user.profile)
+    .then(profile => {
+      profile.champions.push(champion)
+      profile.save()
+      .then(()=> {
+        res.redirect(`/champions/${champion._id}`)
+      })
+      .catch(err => {
+        console.log(err)
+        res.redirect('/champions')
+      })
+    })
+    .catch(err => {
+    console.log(err)
+    res.redirect('/champions')
+    })
   })
   .catch(err => {
     console.log(err)
-    res.redirect('/champions/new')
+    res.redirect('/champions')
   })
 }
 
@@ -81,6 +96,24 @@ function update(req, res) {
   })
 }
 
+function deleteChampion(req, res) {
+  Champion.findById(req.params.championId)
+  .then(champion => {
+    if (champion.owner.equals(req.user.profile._id)) {
+      champion.deleteOne()
+      .then(() => {
+        res.redirect('/champions')
+      })
+    } else {
+      throw new Error('NOT AUTHORIZED')
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
 export {
   index,
   create,
@@ -88,4 +121,5 @@ export {
   show,
   edit,
   update,
+  deleteChampion as delete,
 }
