@@ -52,7 +52,7 @@ function create(req, res) {
 
 function show(req, res) {
   Champion.findById(req.params.championId)
-  .populate('owner')
+  .populate(['owner', 'roles'])
   .then(champion => {
     Role.find({_id: {$nin: champion.roles}})
     .then(roles => {
