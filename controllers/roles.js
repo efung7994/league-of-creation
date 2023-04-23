@@ -1,4 +1,5 @@
 import { Role } from "../models/role.js"
+import { Profile } from '../models/profile.js'
 
 function index(req, res) {
   Role.find({})
@@ -26,7 +27,22 @@ function create(req, res) {
   req.body.owner = req.user.profile._id
   Role.create(req.body)
   .then(role => {
-    res.redirect(`/roles/${role._id}`)
+    Profile.findById(req.user.profile)
+    .then(profile => {
+      profile.roles.push(role)
+      profile.save()
+      .then(()=> {
+        res.redirect(`/roles/${role._id}`)
+      })
+      .catch(err => {
+        console.log(err)
+        res.redirect('/roles')
+      })
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/roles')
+    })
   })
   .catch(err => {
     console.log(err)

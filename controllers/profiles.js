@@ -16,8 +16,7 @@ function index(req, res, next) {
 
 function show(req, res) {
   Profile.findById(req.params.profileId)
-  .populate('champions')
-  .populate('roles')
+  .populate(['champions', 'roles'])
   .then(profile => {
     res.render('profiles/show', {
       profile,
