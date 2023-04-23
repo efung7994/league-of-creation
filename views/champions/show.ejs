@@ -10,12 +10,11 @@
   <p>W: <%= champion.ability2 %></p>
   <p>E: <%= champion.ability3 %></p>
   <p>R: <%= champion.ultimate %></p>
-  <div>Roles: </div>
-    <ul>
+  <div>Roles: 
       <% champion.roles.forEach(role => { %>
-        <li><%= role.name %></li>
+        <a href="/roles/<%= role._id %>"><%= role.name %></a>
       <% }) %>
-    </ul>
+  </div>
 
   <% if (champion.owner.equals(user?.profile._id)) { %>
     <a href="/champions/<%= champion._id %>/edit">
