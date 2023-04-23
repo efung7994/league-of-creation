@@ -1,0 +1,15 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<section>
+  <h1>Edit Role</h1>
+  <form id="new-form" action="/roles/<%= role._id %>?_method=PUT" method="POST">
+    <label for="name-input">Name:</label>
+    <input type="text" name="name" id="name-input" value="<%= role.name %>">
+    <label for="description-input">Description:</label>
+    <textarea name="description" id="description-input"><%= role.description %></textarea>
+    <button type="submit">Save Role</button>
+  </form>
+</section>
+
+<%- include('../partials/footer') %>
