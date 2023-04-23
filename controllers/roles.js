@@ -49,9 +49,43 @@ function show(req, res) {
   })
 }
 
+function edit(req, res) {
+  Role.findById(req.params.roleId)
+  .then(role => {
+    res.render('roles/edit', {
+      role,
+      title: "Edit role"
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
+function update(req, res) {
+  Role.findById(req.params.roleId)
+  .then(role => {
+    if (role.owner.equals(req.user.profile._id)) {
+      role.updateOne(req.body)
+      .then(()=> {
+        res.redirect('/roles')
+      })
+    } else {
+      throw new Error('NOT AUTHORIZED')
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
 export {
   index,
   create,
   newRole as new,
   show,
+  edit,
+  update,
 }
