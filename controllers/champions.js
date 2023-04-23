@@ -1,5 +1,6 @@
 import { Champion } from "../models/champion.js"
 import { Profile } from '../models/profile.js'
+import { Role } from "../models/role.js"
 
 function index(req, res) {
   Champion.find({})
@@ -53,14 +54,22 @@ function show(req, res) {
   Champion.findById(req.params.championId)
   .populate('owner')
   .then(champion => {
-    res.render('champions/show', {
-      champion,
-      title: 'Show Champion'
+    Role.find({_id: {$nin: champion.roles}})
+    .then(roles => {
+      res.render('champions/show', {
+        champion,
+        title: 'Show Champion',
+        roles
+      })
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/champions')
     })
   })
   .catch(err => {
     console.log(err)
-    res.redirect('/')
+    res.redirect('/champions')
   })
 }
 

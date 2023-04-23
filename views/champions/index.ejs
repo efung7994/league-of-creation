@@ -3,13 +3,13 @@
 
 <section>
   <h1>Champions</h1>
-  <ul>
+  <div>
     <% champions.forEach(champion => { %>
-      <li>
+      <ul>
         <a href="/champions/<%= champion._id %>"><%= champion.name %><%= champion.role %></a>
-      </li>
+      </ul>
     <% }) %>
-  </ul>
+    </div>
 </section>
 
 <%- include('../partials/footer') %>

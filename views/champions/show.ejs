@@ -10,6 +10,12 @@
   <p>W: <%= champion.ability2 %></p>
   <p>E: <%= champion.ability3 %></p>
   <p>R: <%= champion.ultimate %></p>
+  <div>Role:</div>
+    <ul>
+      <% champion.roles.forEach(role => { %>
+        <li><%= role.name %></li>
+      <% }) %>
+    </ul>
 
   <% if (champion.owner.equals(user?.profile._id)) { %>
     <a href="/champions/<%= champion._id %>/edit">
@@ -17,6 +23,15 @@
     </a>
     <form action="/champions/<%= champion._id %>?_method=DELETE" method="POST">
       <button class="delete">Delete this champion</button>
+    </form>
+    <form id="add-to-roles" action="/champions/<%= champion._id %>/roles" method="POST">
+    <label for="role-select">Add a Role:</label>
+      <select name="roleId">
+        <% roles.forEach(role => { %>
+          <option value="<%= role._id %>"><%= role.name %></option>
+        <% }) %>
+      </select>
+      <button type="submit">Add</button>
     </form>
   <% } %>
 </section>
