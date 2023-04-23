@@ -123,6 +123,26 @@ function deleteChampion(req, res) {
   })
 }
 
+function addToRoles(req, res) {
+  //find the movie by id
+  Champion.findById(req.params.championId)
+  .then(champion => {
+    champion.roles.push(req.body.roleId)
+    champion.save()
+    .then(() => {
+      res.redirect(`/champions/${champion._id}`)
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/champions')
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/champions')
+  })
+}
+
 export {
   index,
   create,
@@ -131,4 +151,5 @@ export {
   edit,
   update,
   deleteChampion as delete,
+  addToRoles,
 }
