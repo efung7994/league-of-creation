@@ -5,7 +5,7 @@
 <section id="show-view">
   <img src="<%= champion.owner.avatar %>" alt="<%= champion.owner.name %>'s avatar">
   <h1><%= champion.name %></h1>
-  <p>Created by <a href="/profiles/<%= champion.owner._id %>"><%= champion.owner.name %></a></p>
+  <p>Created by: <a id="profile-link" href="/profiles/<%= champion.owner._id %>"><%= champion.owner.name %></a></p>
   <div id="champ-abilities">
     <div id="ability-box"> 
       <p id="ability-command">Passive: </p>
@@ -14,17 +14,21 @@
     <div id="ability-box"> 
       <p id="ability-command">Q: </p>
       <p id="champ-ability"><%= champion.ability1 %></p>
-    </div><div id="ability-box"> 
+    </div>
+    <div id="ability-box"> 
       <p id="ability-command">W: </p>
       <p id="champ-ability"><%= champion.ability2 %></p>
-    </div><div id="ability-box"> 
+    </div>
+    <div id="ability-box"> 
       <p id="ability-command">E: </p>
       <p id="champ-ability"><%= champion.ability3 %></p>
-    </div><div id="ability-box"> 
+    </div>
+    <div id="ability-box"> 
       <p id="ability-command">Ultimate: </p>
       <p id="champ-ability"><%= champion.ultimate %></p>
     </div>
-    <div>Roles: 
+    <div>
+      Roles: 
       <% champion.roles.forEach(role => { %>
         <a href="/roles/<%= role._id %>"><%= role.name %></a>
       <% }) %>

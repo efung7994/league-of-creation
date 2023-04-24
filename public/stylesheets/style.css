@@ -11,8 +11,28 @@ html {
   box-sizing: inherit;
 }
 
+
+a{
+  text-decoration: none;
+  color: white
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+#profile-link{
+  color: yellow;
+  text-decoration: underline;
+}
+
+#profile-link:hover{
+  color: rgb(187, 187, 10);
+}
+
 body {
-  background-color: white;
+  font-family: Roboto, sans-serif;
+  background-color: rgb(64, 92, 216);
   color: black;
   font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
     'Helvetica Neue', sans-serif;
@@ -32,11 +52,8 @@ nav {
 }
 
 main {
+  color:white;
   margin-top: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
 }
 
 .right {
@@ -72,19 +89,24 @@ main {
   padding: 10px 10px 10px 10px;
   min-height: 200px;
   width: 700px;
+  overflow: 0;
 }
 
 #ability-box{
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: rgba(12, 43, 138, 0.888);
+  padding-right: 75px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 #ability-command{
   display: flex;
   justify-content: center;
   margin-right: 10px;
-  width: 100px;
+  width: 75px;
 }
 
 #show-view {
@@ -97,6 +119,38 @@ main {
 #new-form{
   display: flex;
   flex-direction: column;
+}
+
+
+#champ-table{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  border-style:solid;
+  border-width: 5px;
+}
+
+#champ-view{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+table{
+  display: flex;
+  align-items: center;
+  padding-left: 7px;
+}
+table:nth-child(even){
+  background-color: rgb(19, 40, 194);
+  height: 50px;
+  width: 100%;
+}
+
+table:nth-child(odd){
+  background-color: rgba(12, 43, 138, 0.888);
+  height: 50px;
+  width: 100%;
 }
 
 #menu__toggle {

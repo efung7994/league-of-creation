@@ -2,13 +2,17 @@
 <%- include('../partials/nav') %>
 <%- include('../partials/hamburger') %>
 
-<section>
+<section id="champ-view">
   <h1>Champions</h1>
-  <div>
+  <div id="champ-table">
     <% champions.forEach(champion => { %>
-      <ul>
-        <a href="/champions/<%= champion._id %>"><%= champion.name %></a>
-      </ul>
+      <table>
+        <tr>
+          <th>
+            <a href="/champions/<%= champion._id %>"><%= champion.name %></a>
+          </th>
+        </tr>
+      </table>
     <% }) %>
   </div>
 </section>
