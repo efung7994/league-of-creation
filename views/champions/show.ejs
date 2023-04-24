@@ -2,22 +2,24 @@
 <%- include('../partials/nav') %>
 <%- include('../partials/hamburger') %>
 
-<section>
+<section id="show-view">
   <img src="<%= champion.owner.avatar %>" alt="<%= champion.owner.name %>'s avatar">
   <h1><%= champion.name %></h1>
   <p>Created by <a href="/profiles/<%= champion.owner._id %>"><%= champion.owner.name %></a></p>
-  <p>Passive: <%= champion.passive %></p>
-  <p>Q: <%= champion.ability1 %></p>
-  <p>W: <%= champion.ability2 %></p>
-  <p>E: <%= champion.ability3 %></p>
-  <p>R: <%= champion.ultimate %></p>
-  <div>Roles: 
+  <div id="champ-abilities">
+    <p id="champ-ability">Passive: <%= champion.passive %></p>
+    <p id="champ-ability">Q: <%= champion.ability1 %></p>
+    <p id="champ-ability">W: <%= champion.ability2 %></p>
+    <p id="champ-ability">E: <%= champion.ability3 %></p>
+    <p id="champ-ability">R: <%= champion.ultimate %></p>
+    <div>Roles: 
       <% champion.roles.forEach(role => { %>
         <a href="/roles/<%= role._id %>"><%= role.name %></a>
       <% }) %>
+    </div>
   </div>
-
-  <% if (champion.owner.equals(user?.profile._id)) { %>
+      
+      <% if (champion.owner.equals(user?.profile._id)) { %>
     <a href="/champions/<%= champion._id %>/edit">
       <button class="btn">Edit this champion</button>
     </a>

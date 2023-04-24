@@ -39,6 +39,21 @@ main {
   margin-left: auto;
 }
 
+#champ-abilities{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 600px;
+  height: 400px;
+}
+
+#show-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 #menu__toggle {
   opacity: 0;
 }
