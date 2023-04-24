@@ -43,8 +43,31 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 600px;
-  height: 400px;
+  align-items: center;
+  width: 900px;
+  height: 1500px;
+}
+
+#champ-ability{
+  display: flex;
+  align-items: center;
+  border-style: solid;
+  padding: 10px 10px 10px 10px;
+  height: 200px;
+  width: 700px;
+}
+
+#ability-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#ability-command{
+  display: flex;
+  justify-content: center;
+  margin-right: 10px;
+  width: 100px;
 }
 
 #show-view {
@@ -52,6 +75,11 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+#new-form{
+  display: flex;
+  flex-direction: column;
 }
 
 #menu__toggle {
