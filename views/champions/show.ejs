@@ -19,7 +19,7 @@
 
   <% if (champion.owner.equals(user?.profile._id)) { %>
     <a href="/champions/<%= champion._id %>/edit">
-      <button class="btn">Edit this champion!</button>
+      <button class="btn">Edit this champion</button>
     </a>
     <form action="/champions/<%= champion._id %>?_method=DELETE" method="POST">
       <button class="delete">Delete this champion</button>
@@ -33,6 +33,15 @@
       </select>
       <button type="submit">Add</button>
     </form>
+    <form id="remove-from-roles" action="/champions/<%= champion._id %>/roles?_method=DELETE" method="POST">
+      <label for="role-select">Remove a Role:</label>
+        <select name="roleId">
+          <% champion.roles.forEach(role => { %>
+            <option value="<%= role._id %>"><%= role.name %></option>
+          <% }) %>
+        </select>
+        <button type="submit">Remove</button>
+      </form>
   <% } %>
 </section>
 
