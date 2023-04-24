@@ -3,7 +3,11 @@
   <% } %>
 </head>
 <body>
+  <nav>
     <% if (user) { %>
+      <a href="/auth/logout" class="right">
+        <button type="submit">Logout</button>
+      </a>
     <% } else { %>
       <div 
         id="g_id_onload"
@@ -22,7 +26,6 @@
         data-logo_alignment="left"
       ></div>
     <% } %>
-
   </nav>
 
 
