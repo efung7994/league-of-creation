@@ -142,6 +142,25 @@ function addToRoles(req, res) {
   })
 }
 
+function removeFromRoles(req, res) {
+  Champion.findById(req.params.championId)
+  .then(champion => {
+    champion.roles.splice(req.body.roleId)
+    champion.save()
+    .then(() => {
+      res.redirect(`/champions/${champion._id}`)
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/champions')
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/champions')
+  })
+}
+
 export {
   index,
   create,
@@ -151,4 +170,5 @@ export {
   update,
   deleteChampion as delete,
   addToRoles,
+  removeFromRoles,
 }
