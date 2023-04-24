@@ -3,8 +3,8 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema
 
 const roleSchema = new Schema({
-  name: String,
-  description: String,
+  name: {type: String, required: true},
+  description: {type: String, required: true},
   owner: { type: Schema.Types.ObjectId, ref: 'Profile' },
 }, {
   timestamps: true,
