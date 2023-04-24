@@ -12,6 +12,7 @@ router.post('/', isLoggedIn, championsCtrl.create)
 router.post('/:championId/roles', isLoggedIn, championsCtrl.addToRoles)
 router.put('/:championId', isLoggedIn, championsCtrl.update)
 router.delete('/:championId', isLoggedIn, championsCtrl.delete)
+router.delete('/:championId/roles', isLoggedIn, championsCtrl.removeFromRoles)
 
 export {
   router

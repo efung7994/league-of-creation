@@ -145,7 +145,7 @@ function addToRoles(req, res) {
 function removeFromRoles(req, res) {
   Champion.findById(req.params.championId)
   .then(champion => {
-    champion.roles.splice(req.body.roleId)
+    champion.roles.remove(req.body.roleId)
     champion.save()
     .then(() => {
       res.redirect(`/champions/${champion._id}`)
