@@ -20,15 +20,19 @@ body {
 }
 
 nav {
+  position: fixed;
+  right:10px;
   background-color: #f6f6f6;
   color: #1a1a1a;
   display: flex;
   align-items: center;
   padding: 10px;
   min-height: 60px;
+  width: 100%;
 }
 
 main {
+  margin-top: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,7 +49,7 @@ main {
   justify-content: center;
   align-items: center;
   width: 900px;
-  height: 1500px;
+  min-height: 1270px;
 }
 
 #champ-ability{
@@ -53,7 +57,7 @@ main {
   align-items: center;
   border-style: solid;
   padding: 10px 10px 10px 10px;
-  height: 200px;
+  min-height: 200px;
   width: 700px;
 }
 
