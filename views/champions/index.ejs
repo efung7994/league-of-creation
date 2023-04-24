@@ -6,10 +6,10 @@
   <div>
     <% champions.forEach(champion => { %>
       <ul>
-        <a href="/champions/<%= champion._id %>"><%= champion.name %><%= champion.role %></a>
+        <a href="/champions/<%= champion._id %>"><%= champion.name %></a>
       </ul>
     <% }) %>
-    </div>
+  </div>
 </section>
 
 <%- include('../partials/footer') %>

@@ -1,5 +1,6 @@
 <%- include('./partials/html-head') %>
 <%- include('./partials/nav') %>
+<%- include('./partials/hamburger') %>
 
 <main>
   <h1>Welcome <%= user ? user.profile.name : "to the League of Creation" %></h1>
@@ -10,7 +11,7 @@
         alt="<%= user.profile.name %> avatar"
       />
     </div>
-  <% } %>
-</main>
+    <% } %>
+  </main>
 
 <%- include('./partials/footer') %>

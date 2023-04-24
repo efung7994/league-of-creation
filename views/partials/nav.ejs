@@ -3,16 +3,7 @@
   <% } %>
 </head>
 <body>
-  <nav>
-    <a href="/champions">All Champions</a>
-    <a href="/roles">All Roles</a>
     <% if (user) { %>
-      <a href="/champions/new">Add Champion</a>
-      <a href="/roles/new">Add Role</a>
-      <a href="/profiles">My Profile</a>
-      <a href="/auth/logout" class="right">
-        <button type="submit">Logout</button>
-      </a>
     <% } else { %>
       <div 
         id="g_id_onload"
@@ -31,4 +22,7 @@
         data-logo_alignment="left"
       ></div>
     <% } %>
+
   </nav>
+
+
