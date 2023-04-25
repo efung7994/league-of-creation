@@ -4,6 +4,8 @@
 
 <main>
   <h1>Welcome <%= user ? user.profile.name : "to the League of Creation" %></h1>
+  <h2>Please Log In</h2>
+  <img id="login-arrow" src="public/assets/img/arrow.png">
   <% if (user?.profile.avatar) { %>
     <div>
       <img

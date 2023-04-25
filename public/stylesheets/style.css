@@ -128,7 +128,6 @@ main {
 
 
 #champ-table{
-  position: relative;
   display: flex;
   flex-direction: column;
   width: 50%;
@@ -156,17 +155,20 @@ main {
   right: 80px;
 }
 
-#profile-nametag{
+#login-arrow{
   position: absolute;
-  right: 70px;
+  top: 50px;
+  right: 60px;
+  
 }
 
-#champion-nametag{
-  margin-left: 70px;
+th{
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
 }
 
 table{
-  display: flex;
   align-items: center;
   padding-left: 7px;
 }

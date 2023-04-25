@@ -53,6 +53,7 @@ app.use(
     },
   })
 )
+app.use( express.static( "public" ) );
 
 // passport middleware
 app.use(passport.initialize())
