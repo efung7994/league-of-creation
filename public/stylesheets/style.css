@@ -128,6 +128,7 @@ main {
 
 
 #champ-table{
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 50%;
@@ -148,7 +149,7 @@ main {
 }
 
 #champion-header{
-  margin-left: 80px;
+  margin-left: 70px;
 }
 #creator-header{
   position: absolute;
@@ -156,7 +157,12 @@ main {
 }
 
 #profile-nametag{
-  
+  position: absolute;
+  right: 70px;
+}
+
+#champion-nametag{
+  margin-left: 70px;
 }
 
 table{
