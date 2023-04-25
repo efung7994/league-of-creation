@@ -3,13 +3,17 @@
 <%- include('../partials/hamburger') %>
 
 <section id="champ-view">
-  <h1>Champions</h1>
+  <div id="champ-index-header">
+    <h1 id="champion-header">Champion</h1>
+    <h1 id="creator-header">Creator</h1>
+  </div>
   <div id="champ-table">
     <% champions.forEach(champion => { %>
       <table>
         <tr>
           <th>
             <a href="/champions/<%= champion._id %>"><%= champion.name %></a>
+            <a id=profile-nametag href="/profiles/<%= champion.owner._id %>"><%= champion.owner.name %></a>
           </th>
         </tr>
       </table>
