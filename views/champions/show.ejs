@@ -3,10 +3,15 @@
 <%- include('../partials/hamburger') %>
 
 <section id="show-view">
-  <img src="<%= champion.owner.avatar %>" alt="<%= champion.owner.name %>'s avatar">
   <h1><%= champion.name %></h1>
   <p>Created by: <a id="profile-link" href="/profiles/<%= champion.owner._id %>"><%= champion.owner.name %></a></p>
   <div id="champ-abilities">
+    <div id="roles-title">
+      Roles: 
+      <% champion.roles.forEach(role => { %>
+        <a id="role-link-text" href="/roles/<%= role._id %>"><%= role.name %>, </a>
+      <% }) %>
+    </div>
     <div id="ability-box"> 
       <p id="ability-command">Passive: </p>
       <p id="champ-ability"><%= champion.passive %></p>
@@ -27,39 +32,37 @@
       <p id="ability-command">R: </p>
       <p id="champ-ability"><%= champion.ultimate %></p>
     </div>
-    <div>
-      Roles: 
-      <% champion.roles.forEach(role => { %>
-        <a href="/roles/<%= role._id %>"><%= role.name %></a>
-      <% }) %>
-    </div>
   </div>
       
-      <% if (champion.owner.equals(user?.profile._id)) { %>
-    <a href="/champions/<%= champion._id %>/edit">
-      <button class="btn">Edit this champion</button>
-    </a>
-    <form action="/champions/<%= champion._id %>?_method=DELETE" method="POST">
-      <button class="delete">Delete this champion</button>
-    </form>
-    <form id="add-to-roles" action="/champions/<%= champion._id %>/roles" method="POST">
-    <label for="role-select">Add a Role:</label>
-      <select name="roleId">
-        <% roles.forEach(role => { %>
-          <option value="<%= role._id %>"><%= role.name %></option>
-        <% }) %>
-      </select>
-      <button type="submit">Add</button>
-    </form>
-    <form id="remove-from-roles" action="/champions/<%= champion._id %>/roles?_method=DELETE" method="POST">
-      <label for="role-select">Remove a Role:</label>
-        <select name="roleId">
-          <% champion.roles.forEach(role => { %>
-            <option value="<%= role._id %>"><%= role.name %></option>
-          <% }) %>
-        </select>
-        <button type="submit">Remove</button>
-      </form>
+  <% if (champion.owner.equals(user?.profile._id)) { %>
+    <div class="reference" tabindex="0">
+      <div class="popout-menu">
+        <a href="/champions/<%= champion._id %>/edit">
+          <button class="btn">Edit this champion</button>
+        </a>
+        <form id="add-to-roles" action="/champions/<%= champion._id %>/roles" method="POST">
+          <label for="role-select">Add a Role:</label>
+          <select name="roleId">
+            <% roles.forEach(role => { %>
+              <option value="<%= role._id %>"><%= role.name %></option>
+            <% }) %>
+          </select>
+          <button type="submit">Add</button>
+        </form>
+        <form id="remove-from-roles" action="/champions/<%= champion._id %>/roles?_method=DELETE" method="POST">
+          <label for="role-select">Remove a Role:</label>
+          <select name="roleId">
+            <% champion.roles.forEach(role => { %>
+              <option value="<%= role._id %>"><%= role.name %></option>
+            <% }) %>
+          </select>
+          <button type="submit">Remove</button>
+        </form>
+        <form action="/champions/<%= champion._id %>?_method=DELETE" method="POST">
+          <button class="delete">Delete this champion</button>
+        </form>
+      </div>
+    </div>
   <% } %>
 </section>
 

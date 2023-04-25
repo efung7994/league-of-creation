@@ -30,6 +30,16 @@ a:hover{
   color: rgb(187, 187, 10);
 }
 
+#role-link-text {
+  color: yellow;
+  text-decoration: none;
+}
+
+#role-link-text:hover {
+  color: rgb(187, 187, 10);
+  text-decoration: underline;
+}
+
 body {
   font-family: Roboto, sans-serif;
   background-color: rgb(64, 92, 216);
@@ -71,6 +81,10 @@ main {
   background-color: rgb(255, 255, 255);
   transition: 0.5s;
   cursor: pointer;
+}
+
+#roles-title{
+  margin-bottom: 20px;
 }
 
 #champ-abilities{
@@ -119,6 +133,37 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+/* <----------POPOUT MENU----------> */
+.reference {
+  position: fixed;
+  background: tomato;
+  width: 100px;
+  height: 80px;
+  right: 0px;
+  top:200px;
+}
+
+.popout-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+  position: absolute;
+  visibility: hidden;
+  right: 100%;
+  background: #9C27B0;
+  color: white;
+  padding: 16px;
+  width: 400px;
+  height: 300px;
+}
+
+.reference:hover > .popout-menu,
+.reference:focus > .popout-menu,
+.reference:focus-within > .popout-menu {
+  visibility: visible;
 }
 
 #new-form{
@@ -205,7 +250,7 @@ table:nth-child(odd){
 /* Tooltip text */
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 300px;
+  width: 200px;
   background-color: black;
   color: #fff;
   text-align: center;
