@@ -35,31 +35,35 @@
   </div>
       
   <% if (champion.owner.equals(user?.profile._id)) { %>
-    <div class="reference" tabindex="0">
+    <div class="reference" tabindex="0">EDIT
       <div class="popout-menu">
         <a href="/champions/<%= champion._id %>/edit">
-          <button class="btn">Edit this champion</button>
+          <button class="edit-buttons" id="adjust-champ-btn">Edit this champion</button>
         </a>
-        <form id="add-to-roles" action="/champions/<%= champion._id %>/roles" method="POST">
-          <label for="role-select">Add a Role:</label>
-          <select name="roleId">
-            <% roles.forEach(role => { %>
-              <option value="<%= role._id %>"><%= role.name %></option>
-            <% }) %>
-          </select>
-          <button type="submit">Add</button>
-        </form>
-        <form id="remove-from-roles" action="/champions/<%= champion._id %>/roles?_method=DELETE" method="POST">
-          <label for="role-select">Remove a Role:</label>
-          <select name="roleId">
-            <% champion.roles.forEach(role => { %>
-              <option value="<%= role._id %>"><%= role.name %></option>
-            <% }) %>
-          </select>
-          <button type="submit">Remove</button>
-        </form>
+        <div id="adjust-role">
+          <form id="add-to-roles" action="/champions/<%= champion._id %>/roles" method="POST">
+            <label for="role-select">Add a Role:</label>
+            <select id="roleId" name="roleId">
+              <% roles.forEach(role => { %>
+                <option value="<%= role._id %>"><%= role.name %></option>
+              <% }) %>
+            </select>
+            <button class="edit-buttons" type="submit">Add</button>
+          </form>
+        </div>
+        <div id="adjust-role">
+          <form id="remove-from-roles" action="/champions/<%= champion._id %>/roles?_method=DELETE" method="POST">
+            <label for="role-select">Remove a Role:</label>
+            <select id="roleId" name="roleId">
+              <% champion.roles.forEach(role => { %>
+                <option value="<%= role._id %>"><%= role.name %></option>
+              <% }) %>
+            </select>
+            <button class="edit-buttons" id="remove-btn" type="submit">Remove</button>
+          </form>
+        </div>
         <form action="/champions/<%= champion._id %>?_method=DELETE" method="POST">
-          <button class="delete">Delete this champion</button>
+          <button class="edit-buttons" id="adjust-champ-btn">Delete this champion</button>
         </form>
       </div>
     </div>

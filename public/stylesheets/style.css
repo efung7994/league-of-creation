@@ -137,11 +137,17 @@ main {
 
 /* <----------POPOUT MENU----------> */
 .reference {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  font-family: Roboto, sans-serif;
+  align-items: center;
   position: fixed;
-  background: tomato;
+  background: #16161d;
+  border-style: solid;
   width: 100px;
   height: 80px;
-  right: 0px;
+  right: 40px;
   top:200px;
 }
 
@@ -153,7 +159,8 @@ main {
   position: absolute;
   visibility: hidden;
   right: 100%;
-  background: #9C27B0;
+  background: darkblue;
+  border-style:double ;
   color: white;
   padding: 16px;
   width: 400px;
@@ -164,6 +171,32 @@ main {
 .reference:focus > .popout-menu,
 .reference:focus-within > .popout-menu {
   visibility: visible;
+}
+
+#adjust-role {
+  display: flex;
+  font-size: 20px;
+  justify-content: flex-end;
+}
+
+.edit-buttons {
+  width: 70px;
+  height: 30px;
+  border-radius: 5px;
+  border-style: solid;
+}
+
+.edit-buttons:hover {
+  background-color: rgb(211, 208, 208);
+  cursor: pointer;
+}
+
+#roleId {
+  width: 100px;
+}
+
+#adjust-champ-btn {
+  width: 150px;
 }
 
 #new-form{
