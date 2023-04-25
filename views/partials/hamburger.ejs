@@ -5,12 +5,13 @@
   </label>
 
   <ul class="menu__box">
+    <li><a class="menu__item" href="/">Home</a></li>
     <li><a class="menu__item" href="/champions">All Champions</a></li>
     <li><a class="menu__item" href="/roles">All Roles</a></li>
     <% if (user) { %>
       <li><a class="menu__item" href="/champions/new">Add Champion</a></li>
       <li><a class="menu__item" href="/roles/new">Add Role</a></li>
-      <li><a class="menu__item" href="/profiles">My Profile</a></li>
+      <li><a class="menu__item" href="/profiles/<%= user.profile._id %>">My Profile</a></li>
     <% } %>
   </ul>
 </div>
