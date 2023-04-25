@@ -186,6 +186,39 @@ table:nth-child(odd){
 }
 
 
+.tooltip{
+  position: fixed;
+  top: 100px;
+  right: 250px;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 10px 10px 10px 10px;
+  background-color: darkblue;
+  cursor: help;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  cursor: help;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 300px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+  line-height: 2;
+}
+
+
+
 /* <----------HAMBURGER CSS----------> */
 #menu__toggle {
   opacity: 0;
