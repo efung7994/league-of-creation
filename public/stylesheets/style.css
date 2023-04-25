@@ -142,17 +142,9 @@ main {
 }
 
 #champ-index-header{
-  position: relative;
   display: flex;
+  justify-content: space-between;
   width: 50%;
-}
-
-#champion-header{
-  margin-left: 70px;
-}
-#creator-header{
-  position: absolute;
-  right: 80px;
 }
 
 #login-arrow{
@@ -162,10 +154,19 @@ main {
   
 }
 
+#table-text-left {
+  padding-left: 100px;
+}
+
+#table-text-right {
+  padding-right: 100px;
+}
+
 th{
   margin-top: 10px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 table{

@@ -2,15 +2,24 @@
 <%- include('../partials/nav') %>
 <%- include('../partials/hamburger') %>
 
-<section>
-  <h1>Roles</h1>
-  <ul>
+
+<section id="champ-view">
+  <div id="champ-index-header">
+    <h1 id="table-text-left">Role</h1>
+    <h1 id="table-text-right">Creator</h1>
+  </div>
+  <div id="champ-table">
     <% roles.forEach(role => { %>
-      <li>
-        <a href="/roles/<%= role._id %>"><%= role.name %></a>
-      </li>
+      <table>
+        <tr>
+          <th>
+            <a id="table-text-left" href="/roles/<%= role._id %>"><%= role.name %></a>
+            <a id="table-text-right" href="/profiles/<%= role.owner._id %>"><%= role.owner.name %></a>
+          </th>
+        </tr>
+      </table>
     <% }) %>
-  </ul>
+  </div>
 </section>
 
 <%- include('../partials/footer') %>

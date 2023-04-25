@@ -4,16 +4,16 @@
 
 <section id="champ-view">
   <div id="champ-index-header">
-    <h1 id="champion-header">Champion</h1>
-    <h1 id="creator-header">Creator</h1>
+    <h1 id="table-text-left">Champion</h1>
+    <h1 id="table-text-right">Creator</h1>
   </div>
   <div id="champ-table">
     <% champions.forEach(champion => { %>
       <table>
         <tr>
           <th>
-            <a id="champion-nametag" href="/champions/<%= champion._id %>"><%= champion.name %></a>
-            <a id=profile-nametag href="/profiles/<%= champion.owner._id %>"><%= champion.owner.name %></a>
+            <a id="table-text-left" href="/champions/<%= champion._id %>"><%= champion.name %></a>
+            <a id="table-text-right" href="/profiles/<%= champion.owner._id %>"><%= champion.owner.name %></a>
           </th>
         </tr>
       </table>
