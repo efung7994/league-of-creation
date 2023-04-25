@@ -2,23 +2,38 @@
 <%- include('../partials/nav') %>
 <%- include('../partials/hamburger') %>
 
-<section>
-  <h1>Edit Champion</h1>
-  <form id="new-form" action="/champions/<%= champion._id %>?_method=PUT" method="POST">
-    <label for="name-input">Name:</label>
-    <input type="text" name="name" id="name-input" value="<%= champion.name %>">
-    <label for="passive-input">Passive:</label>
-    <textarea name="passive" id="passive-input"><%= champion.passive %></textarea>
-    <label for="ability1-input">Q:</label>
-    <textarea name="ability1" id="ability1-input"><%= champion.ability1 %></textarea>
-    <label for="ability2-input">W:</label>
-    <textarea name="ability2" id="ability2-input"><%= champion.ability2 %></textarea>
-    <label for="ability3-input">E:</label>
-    <textarea name="ability3" id="ability3-input"><%= champion.ability3 %></textarea>
-    <label for="ultimate-input">Ultimate:</label>
-    <textarea name="ultimate" id="ultimate-input"><%= champion.ultimate %></textarea>
-    <button type="submit">Save Champion</button>
-  </form>
+<div class="tooltip">
+  Help
+  <span class="tooltiptext">Q = First Ability <br> W = Second Ability <br> E = Third Ability <br> R = Ultimate Ability</span>
+  </label>
+</div>
+
+<section id="show-view">
+  <h1>Edit this Champion</h1>
+  <form action="/champions/<%= champion._id %>?_method=PUT" method="POST">
+    <h3>Name: <input name="name" value="<%= champion.name %>" type="text"></h3>
+    <div id="ability-box"> 
+      <p id="ability-command">Passive: </p>
+      <p id="champ-ability"><textarea name="passive" cols="82" rows="10"><%= champion.passive %></textarea></p>
+    </div>
+    <div id="ability-box"> 
+      <p id="ability-command">Q: </p>
+      <p id="champ-ability"><textarea name="ability1" cols="82" rows="10"><%= champion.ability1 %></textarea></p>
+    </div>
+    <div id="ability-box"> 
+      <p id="ability-command">W: </p>
+      <p id="champ-ability"><textarea name="ability2" cols="82" rows="10"><%= champion.ability2 %></textarea></p>
+    </div>
+    <div id="ability-box"> 
+      <p id="ability-command">E: </p>
+      <p id="champ-ability"><textarea name="ability3" cols="82" rows="10"><%= champion.ability3 %></textarea></p>
+    </div>
+    <div id="ability-box"> 
+      <p id="ability-command">R: </p>
+      <p id="champ-ability"><textarea name="ultimate" cols="82" rows="10"><%= champion.ultimate %></textarea></p>
+    </div>
+    <button id="save-btn" type="submit">Save</button>
+    </form>
 </section>
 
 <%- include('../partials/footer') %>

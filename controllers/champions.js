@@ -93,7 +93,7 @@ function update(req, res) {
     if (champion.owner.equals(req.user.profile._id)) {
       champion.updateOne(req.body)
       .then(()=> {
-        res.redirect('/champions')
+        res.redirect(`/champions/${champion._id}`)
       })
     } else {
       throw new Error('NOT AUTHORIZED')
