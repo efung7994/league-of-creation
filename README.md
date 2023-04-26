@@ -1,4 +1,3 @@
-<style>h1,h2,h3,h4 { border-bottom: 0; } </style>
 
 # League of Creation
 ![screenshot](./public/assets/img/Screenshot%202023-04-26%20at%202.32.52%20PM.png)
