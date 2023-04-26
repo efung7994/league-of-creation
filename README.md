@@ -1,4 +1,3 @@
-<style>h1,h2,h3,h4 { border-bottom: 0; } </style>
 
 # League of Creation
 ![screenshot](./public/assets/img/Screenshot%202023-04-26%20at%202.32.52%20PM.png)
@@ -12,7 +11,7 @@
 
 ---
 # Background
-This app was developed for users to store their ideas for the game League of Legends. As a LoL player, I often have ideas about how to introduce a new champion or role to the game. With this app, you can store your ideas so that you can remember them and also share them with your friends.
+This app is for users to store their ideas for League of Legends. As a League of Legends player, I often have ideas about how to introduce a new champion or role to the game. With this app, you can create champions and roles. You are then able to share these creations with your friends.
 
 ---
 
@@ -39,12 +38,12 @@ This app was developed for users to store their ideas for the game League of Leg
 
 [Poro landing page gif](https://tenor.com/view/zzz-tired-sleepy-bubble-drool-gif-6358176)
 
-[Image editor](https://www.veed.io/)
+[Image Editor](https://www.veed.io/)
 
 ---
 
 # Next Steps
-- Add a comments section to the champion and role show pages
-- Add a search bar to the champion and role index pages
+- Add a comments section to the champion and role "show" pages
+- Add a search bar to the champion and role "index" pages
 - Add the ability to create items
 - Add a favorite button
