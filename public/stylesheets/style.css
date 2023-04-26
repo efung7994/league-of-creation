@@ -26,6 +26,13 @@ textarea {
   font-size: 16px;
 }
 
+#poro-sleep {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  object-position: 0px -25px;
+}
+
 #profile-link{
   color: yellow;
   text-decoration: underline;
@@ -70,6 +77,13 @@ main {
   font-family: Roboto, sans-serif;
   color:white;
   margin-top: 50px;
+}
+
+#landing-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .right {

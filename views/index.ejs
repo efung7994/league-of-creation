@@ -1,18 +1,44 @@
 <%- include('./partials/html-head') %>
-<%- include('./partials/nav') %>
+<% if (!user) { %>
+  <script defer src="https://accounts.google.com/gsi/client"></script>
+<% } %>
+</head>
+<body>
+<nav>
+  <% if (user) { %>
+    <a href="/auth/logout" class="right">
+      <button id="logout-btn" type="submit">Logout</button>
+    </a>
+  <% } %>
+</nav>
 <%- include('./partials/hamburger') %>
 
 <main>
-  <h1>Welcome <%= user ? user.profile.name : "to the League of Creation" %></h1>
-  <h2>Please Log In</h2>
-  <img id="login-arrow" src="public/assets/img/arrow.png">
-  <% if (user?.profile.avatar) { %>
-    <div>
-      <img
-        src="<%= user.profile.avatar %>"
-        alt="<%= user.profile.name %> avatar"
-      />
-    </div>
-    <% } %>
+  <div id="landing-page">
+    <% if (!user) { %>
+        <h1>Welcome to the League of Creation!</h1>
+        <img id="poro-sleep" src="/assets/img/porosleep.gif">
+        <h2>Log in to start creating!</h2>
+        <div 
+        id="g_id_onload"
+        data-client_id="<%= googleClientID %>"
+        data-login_uri="/auth/google"
+        data-auto_prompt="false"
+        data-prompt_parent_id="g_id_onload"
+      ></div>
+      <div 
+        class="g_id_signin"
+        data-type="standard"
+        data-size="large"
+        data-theme="outline"
+        data-text="sign_in_with"
+        data-shape="rectangular"
+        data-logo_alignment="left"
+      ></div>
+      <% } else { %>
+          <h1>Welcome Back <%= user.profile.name %>!</h1>
+          <img src="/assets/img/porohappy.png">
+        <% } %>
+  </div>
 
 <%- include('./partials/footer') %>
