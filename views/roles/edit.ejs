@@ -2,15 +2,19 @@
 <%- include('../partials/nav') %>
 <%- include('../partials/hamburger') %>
 
-<section>
-  <h1>Edit Role</h1>
-  <form id="new-form" action="/roles/<%= role._id %>?_method=PUT" method="POST">
-    <label for="name-input">Name:</label>
-    <input type="text" name="name" id="name-input" value="<%= role.name %>">
-    <label for="description-input">Description:</label>
-    <textarea name="description" id="description-input"><%= role.description %></textarea>
-    <button type="submit">Save Role</button>
-  </form>
+<section id="show-view">
+  <h1>Edit this Role</h1>
+  <form action="/roles/<%= role._id %>?_method=PUT" method="POST">
+    <div id="name-box">
+      <h3>Name (Required):</h3> 
+      <input id="name-input" name="name" value="<%= role.name %>"  type="text">
+    </div>
+    <div id="ability-box"> 
+      <p id="ability-command">Description: </p>
+      <p id="champ-ability"><textarea name="description" cols="82" rows="10"><%= role.description %></textarea></p>
+    </div>
+    <button id="save-btn" type="submit">Save Changes</button>
+    </form>
 </section>
 
 <%- include('../partials/footer') %>

@@ -2,19 +2,26 @@
 <%- include('../partials/nav') %>
 <%- include('../partials/hamburger') %>
 
-<section>
-  <img src="<%= role.owner.avatar %>" alt="<%= role.owner.name %>'s avatar">
+<section id="show-view">
   <h1><%= role.name %></h1>
-  <p>Created by <a href="/profiles/<%= role.owner._id %>"><%= role.owner.name %></a></p>
-  <p>Description: <%= role.description %></p>
-
+  <p>Created by: <a id="profile-link" href="/profiles/<%= role.owner._id %>"><%= role.owner.name %></a></p>
+  <div>
+    <div id="ability-box"> 
+      <p id="ability-command">Description: </p>
+      <p id="champ-ability"><%= role.description %></p>
+    </div>
+  </div>  
   <% if (role.owner.equals(user?.profile._id)) { %>
-    <a href="/roles/<%= role._id %>/edit">
-      <button class="btn">Edit this role!</button>
-    </a>
-    <form action="/roles/<%= role._id %>?_method=DELETE" method="POST">
-      <button class="delete">Delete this role</button>
-    </form>
+    <div class="reference" tabindex="0">EDIT
+      <div class="popout-menu">
+        <a href="/roles/<%= role._id %>/edit">
+          <button class="edit-buttons" id="adjust-champ-btn">Edit this role</button>
+        </a>
+        <form action="/roles/<%= role._id %>?_method=DELETE" method="POST">
+          <button class="edit-buttons" id="adjust-champ-btn">Delete this role</button>
+        </form>
+      </div>
+    </div>
   <% } %>
 </section>
 
