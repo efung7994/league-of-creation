@@ -2,7 +2,7 @@
 <%- include('../partials/nav') %>
 <%- include('../partials/hamburger') %>
 
-<main>
+<main id="profile-header">
   <h1><%= profile.name %></h1>
     <div>
       <img
@@ -11,23 +11,27 @@
       />
     </div>
 </main>
-<section>
-  <h1>Champions</h1>
-  <ul>
-    <% profile.champions.forEach(champion => { %>
-      <li>
-        <a href="/champions/<%= champion._id %>"><%= champion.name %></a>
-      </li>
-    <% }) %>
-  </ul>
-  <h1>Roles</h1>
-  <ul>
-    <% profile.roles.forEach(role => { %>
-      <li>
-        <a href="/roles/<%= role._id %>"><%= role.name %></a>
-      </li>
-    <% }) %>
-  </ul>
+<section id="profile-creations">
+  <div id="profile-list">
+    <h1 id="text-title">Champions</h1>
+    <div>
+      <% profile.champions.forEach(champion => { %>
+        <p>
+          <a href="/champions/<%= champion._id %>"><%= champion.name %></a>
+        </p>
+      <% }) %>
+      </div>
+  </div>
+  <div id="profile-list">
+    <h1 id="text-title">Roles</h1>
+    <div>
+      <% profile.roles.forEach(role => { %>
+        <p>
+          <a href="/roles/<%= role._id %>"><%= role.name %></a>
+        </p>
+      <% }) %>
+      </div>
+  </div>
 </section>
 
 <%- include('../partials/footer') %>
