@@ -1,19 +1,5 @@
 import { Profile } from '../models/profile.js'
 
-function index(req, res, next) {
-  Profile.find({})
-  .then(profiles => {
-    res.render('profiles', {
-      profiles,
-			title: "Profile",
-    })
-  })
-  .catch(err => {
-    console.log(err)
-    res.redirect('/')
-  })
-}
-
 function show(req, res) {
   Profile.findById(req.params.profileId)
   .populate(['champions', 'roles'])
@@ -30,6 +16,5 @@ function show(req, res) {
 }
 
 export {
-  index,
   show,
 }
