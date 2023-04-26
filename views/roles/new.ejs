@@ -2,16 +2,16 @@
 <%- include('../partials/nav') %>
 <%- include('../partials/hamburger') %>
 
-<section id="show-view">
+<section id="page-container">
   <h1>Create A Role</h1>
   <form id="new-form" action="/roles" method="POST">
     <div id="name-box">
       <h3>Name(Required):</h3> 
       <input id="name-input" name="name" type="text">
     </div>
-    <div id="ability-box"> 
-      <p id="ability-command">Description: </p>
-      <p id="champ-ability"><textarea name="description" id="" cols="82" rows="10"></textarea></p>
+    <div id="objects-container"> 
+      <p id="descriptor">Description: </p>
+      <p id="description-text"><textarea name="description" id="" cols="82" rows="10"></textarea></p>
     </div>
     <button id="save-btn" type="submit">Add Role</button>
   </form>

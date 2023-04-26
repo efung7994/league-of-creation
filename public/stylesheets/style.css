@@ -26,32 +26,6 @@ textarea {
   font-size: 16px;
 }
 
-#poro-sleep {
-  height: 200px;
-  width: 200px;
-  object-fit: cover;
-  object-position: 0px -25px;
-}
-
-#profile-link{
-  color: yellow;
-  text-decoration: underline;
-}
-
-#profile-link:hover{
-  color: rgb(187, 187, 10);
-}
-
-#role-link-text {
-  color: yellow;
-  text-decoration: none;
-}
-
-#role-link-text:hover {
-  color: rgb(187, 187, 10);
-  text-decoration: underline;
-}
-
 body {
   font-family: Roboto, sans-serif;
   background-color: rgb(64, 92, 216);
@@ -79,6 +53,34 @@ main {
   margin-top: 50px;
 }
 
+/* <----------Landing Page----------> */
+
+#poro-sleep {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  object-position: 0px -25px;
+}
+
+#profile-link{
+  color: yellow;
+  text-decoration: underline;
+}
+
+#profile-link:hover{
+  color: rgb(187, 187, 10);
+}
+
+#role-link-text {
+  color: yellow;
+  text-decoration: none;
+}
+
+#role-link-text:hover {
+  color: rgb(187, 187, 10);
+  text-decoration: underline;
+}
+
 #landing-page {
   display: flex;
   flex-direction: column;
@@ -91,6 +93,7 @@ main {
   margin-right: 20px;
 }
 
+/* <----------Logout button----------> */
 #logout-btn{
   width: 85px;
   height: 30px;
@@ -103,10 +106,20 @@ main {
   cursor: pointer;
 }
 
+/* <----------Champion Show View----------> */
 #roles-title{
   margin-bottom: 20px;
 }
 
+#champ-abilities{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 900px;
+  min-height: 1270px;
+}
+/* <----------New/Edit Views----------> */
 #name-input {
   width: 200px;
   margin-left: 10px;
@@ -118,16 +131,19 @@ main {
   justify-content: center;
 }
 
-#champ-abilities{
+#new-form{
+  display: flex;
+  flex-direction: column;
+}
+/* <----------General Styling for pages----------> */
+#page-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 900px;
-  min-height: 1270px;
 }
 
-#champ-ability{
+#description-text{
   display: flex;
   align-items: center;
   border-style: solid;
@@ -138,7 +154,7 @@ main {
   white-space: pre-wrap;
 }
 
-#ability-box{
+#objects-container{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -152,19 +168,13 @@ main {
   border-color: grey;
 }
 
-#ability-command{
+#descriptor{
   display: flex;
   justify-content: center;
   margin-right: 10px;
   width: 100px;
 }
 
-#show-view {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
 /* <----------POPOUT MENU----------> */
 .reference {
@@ -204,6 +214,7 @@ main {
   visibility: visible;
 }
 
+/* <----------POPOUT OPTIONS----------> */
 #adjust-role {
   display: flex;
   font-size: 20px;
@@ -248,11 +259,7 @@ main {
   width: 150px;
 }
 
-#new-form{
-  display: flex;
-  flex-direction: column;
-}
-
+/* <----------INDEX VIEWS----------> */
 
 #champ-table{
   display: flex;
@@ -268,17 +275,10 @@ main {
   align-items: center;
 }
 
-#champ-index-header{
+#table-header{
   display: flex;
   justify-content: space-between;
   width: 50%;
-}
-
-#login-arrow{
-  position: absolute;
-  top: 50px;
-  right: 60px;
-  
 }
 
 #table-text-left {
@@ -312,6 +312,7 @@ table:nth-child(odd){
   width: 100%;
 }
 
+/* <----------PROFILE SHOW VIEW----------> */
 #profile-header{
   display: flex;
   flex-direction: column;

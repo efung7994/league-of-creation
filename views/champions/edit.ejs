@@ -8,32 +8,32 @@
   </label>
 </div>
 
-<section id="show-view">
+<section id="page-container">
   <h1>Edit this Champion</h1>
   <form action="/champions/<%= champion._id %>?_method=PUT" method="POST">
     <div id="name-box">
       <h3>Name (Required):</h3> 
       <input id="name-input" name="name" value="<%= champion.name %>"  type="text">
     </div>
-    <div id="ability-box"> 
-      <p id="ability-command">Passive: </p>
-      <p id="champ-ability"><textarea name="passive" cols="82" rows="10"><%= champion.passive %></textarea></p>
+    <div id="objects-container"> 
+      <p id="descriptor">Passive: </p>
+      <p id="description-text"><textarea name="passive" cols="82" rows="10"><%= champion.passive %></textarea></p>
     </div>
-    <div id="ability-box"> 
-      <p id="ability-command">Q: </p>
-      <p id="champ-ability"><textarea name="ability1" cols="82" rows="10"><%= champion.ability1 %></textarea></p>
+    <div id="objects-container"> 
+      <p id="descriptor">Q: </p>
+      <p id="description-text"><textarea name="ability1" cols="82" rows="10"><%= champion.ability1 %></textarea></p>
     </div>
-    <div id="ability-box"> 
-      <p id="ability-command">W: </p>
-      <p id="champ-ability"><textarea name="ability2" cols="82" rows="10"><%= champion.ability2 %></textarea></p>
+    <div id="objects-container"> 
+      <p id="descriptor">W: </p>
+      <p id="description-text"><textarea name="ability2" cols="82" rows="10"><%= champion.ability2 %></textarea></p>
     </div>
-    <div id="ability-box"> 
-      <p id="ability-command">E: </p>
-      <p id="champ-ability"><textarea name="ability3" cols="82" rows="10"><%= champion.ability3 %></textarea></p>
+    <div id="objects-container"> 
+      <p id="descriptor">E: </p>
+      <p id="description-text"><textarea name="ability3" cols="82" rows="10"><%= champion.ability3 %></textarea></p>
     </div>
-    <div id="ability-box"> 
-      <p id="ability-command">R: </p>
-      <p id="champ-ability"><textarea name="ultimate" cols="82" rows="10"><%= champion.ultimate %></textarea></p>
+    <div id="objects-container"> 
+      <p id="descriptor">R: </p>
+      <p id="description-text"><textarea name="ultimate" cols="82" rows="10"><%= champion.ultimate %></textarea></p>
     </div>
     <button id="save-btn" type="submit">Save Changes</button>
     </form>

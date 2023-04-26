@@ -2,13 +2,13 @@
 <%- include('../partials/nav') %>
 <%- include('../partials/hamburger') %>
 
-<section id="show-view">
+<section id="page-container">
   <h1><%= role.name %></h1>
   <p>Created by: <a id="profile-link" href="/profiles/<%= role.owner._id %>"><%= role.owner.name %></a></p>
   <div>
-    <div id="ability-box"> 
-      <p id="ability-command">Description: </p>
-      <p id="champ-ability"><%= role.description %></p>
+    <div id="objects-container"> 
+      <p id="descriptor">Description: </p>
+      <p id="description-text"><%= role.description %></p>
     </div>
   </div>  
   <% if (role.owner.equals(user?.profile._id)) { %>

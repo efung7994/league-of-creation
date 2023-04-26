@@ -2,7 +2,7 @@
 <%- include('../partials/nav') %>
 <%- include('../partials/hamburger') %>
 
-<section id="show-view">
+<section id="page-container">
   <h1><%= champion.name %></h1>
   <p>Created by: <a id="profile-link" href="/profiles/<%= champion.owner._id %>"><%= champion.owner.name %></a></p>
   <div id="champ-abilities">
@@ -12,25 +12,25 @@
         <a id="role-link-text" href="/roles/<%= role._id %>">| <%= role.name %> | </a>
       <% }) %>
     </div>
-    <div id="ability-box"> 
-      <p id="ability-command">Passive: </p>
-      <p id="champ-ability"><%= champion.passive %></p>
+    <div id="objects-container"> 
+      <p id="descriptor">Passive: </p>
+      <p id="description-text"><%= champion.passive %></p>
     </div>
-    <div id="ability-box"> 
-      <p id="ability-command">Q: </p>
-      <p id="champ-ability"><%= champion.ability1 %></p>
+    <div id="objects-container"> 
+      <p id="descriptor">Q: </p>
+      <p id="description-text"><%= champion.ability1 %></p>
     </div>
-    <div id="ability-box"> 
-      <p id="ability-command">W: </p>
-      <p id="champ-ability"><%= champion.ability2 %></p>
+    <div id="objects-container"> 
+      <p id="descriptor">W: </p>
+      <p id="description-text"><%= champion.ability2 %></p>
     </div>
-    <div id="ability-box"> 
-      <p id="ability-command">E: </p>
-      <p id="champ-ability"><%= champion.ability3 %></p>
+    <div id="objects-container"> 
+      <p id="descriptor">E: </p>
+      <p id="description-text"><%= champion.ability3 %></p>
     </div>
-    <div id="ability-box"> 
-      <p id="ability-command">R: </p>
-      <p id="champ-ability"><%= champion.ultimate %></p>
+    <div id="objects-container"> 
+      <p id="descriptor">R: </p>
+      <p id="description-text"><%= champion.ultimate %></p>
     </div>
   </div>
       
