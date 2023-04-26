@@ -9,7 +9,7 @@
     <div id="roles-title">
       Roles: 
       <% champion.roles.forEach(role => { %>
-        <a id="role-link-text" href="/roles/<%= role._id %>"><%= role.name %>, </a>
+        <a id="role-link-text" href="/roles/<%= role._id %>">| <%= role.name %> | </a>
       <% }) %>
     </div>
     <div id="ability-box"> 

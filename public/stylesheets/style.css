@@ -92,6 +92,17 @@ main {
   margin-bottom: 20px;
 }
 
+#name-input {
+  width: 200px;
+  margin-left: 10px;
+}
+
+#name-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 #champ-abilities{
   display: flex;
   flex-direction: column;
@@ -196,6 +207,24 @@ main {
   cursor: pointer;
 }
 
+#save-btn {
+  font-family: Roboto, sans-serif;
+  position: fixed;
+  bottom: 25px;
+  right: 200px;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: white;
+  padding: 10px 10px 10px 10px;
+  background-color: darkgreen;
+  color: white;
+}
+
+#save-btn:hover {
+  cursor: pointer;
+  background-color: rgb(1, 68, 1);
+}
+
 #roleId {
   width: 100px;
 }
@@ -268,6 +297,8 @@ table:nth-child(odd){
   width: 100%;
 }
 
+
+/* <----------TOOLTIP----------> */
 
 .tooltip{
   position: fixed;

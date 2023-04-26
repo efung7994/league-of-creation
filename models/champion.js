@@ -3,7 +3,7 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema
 
 const championSchema = new Schema({
-  name: String,
+  name: {type: String, required: true},
   passive: String,
   ability1: String,
   ability2: String,
