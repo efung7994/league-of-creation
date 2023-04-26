@@ -5,9 +5,9 @@
 ---
 # Getting Started
 
-## Use [this](league-of-creation.fly.dev) link to go to the app!
+## Click [here](https://league-of-creation.fly.dev/) link to go to the app!
 
-## [Trello](https://trello.com/b/tTPnVPvc/league-of-creation)
+## Click [here](https://trello.com/b/tTPnVPvc/league-of-creation) to check out my Trello!
 
 ---
 # Background
@@ -20,9 +20,13 @@ This app is for users to store their ideas for League of Legends. As a League of
 - Node.js
 - Express
 - MongoDB
-- HTML 5
+- Mongoose
 - Javascript
 - CSS
+- Git
+- Fly.io
+- Google OAuth
+- EJS
 
 ---
 
@@ -47,3 +51,4 @@ This app is for users to store their ideas for League of Legends. As a League of
 - Add a search bar to the champion and role "index" pages
 - Add the ability to create items
 - Add a favorite button
+- Design a logo for the app
