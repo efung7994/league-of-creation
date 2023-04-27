@@ -135,6 +135,24 @@ main {
   display: flex;
   flex-direction: column;
 }
+
+#save-btn {
+  font-family: Roboto, sans-serif;
+  position: fixed;
+  top: 10px;
+  right: 400px;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: white;
+  padding: 10px 10px 10px 10px;
+  background-color: darkgreen;
+  color: white;
+}
+
+#save-btn:hover {
+  cursor: pointer;
+  background-color: rgb(1, 68, 1);
+}
 /* <----------General Styling for pages----------> */
 #page-container {
   display: flex;
@@ -180,16 +198,19 @@ main {
 .reference {
   display: flex;
   justify-content: center;
-  font-size: 30px;
+  font-size: 20px;
   font-family: Roboto, sans-serif;
   align-items: center;
   position: fixed;
   background: #16161d;
   border-style: solid;
-  width: 100px;
-  height: 80px;
+  width: 85px;
+  height: 30px;
   right: 40px;
-  top:200px;
+  top:16px;
+  right: 200px;
+  cursor: default;
+  border-style: solid;
 }
 
 .popout-menu {
@@ -199,7 +220,7 @@ main {
   align-items: space-between;
   position: absolute;
   visibility: hidden;
-  right: 100%;
+  top: 100%;
   background: darkblue;
   border-style:double ;
   color: white;
@@ -233,30 +254,24 @@ main {
   cursor: pointer;
 }
 
-#save-btn {
-  font-family: Roboto, sans-serif;
-  position: fixed;
-  bottom: 25px;
-  right: 200px;
-  border-style: solid;
-  border-radius: 5px;
-  border-color: white;
-  padding: 10px 10px 10px 10px;
-  background-color: darkgreen;
-  color: white;
-}
-
-#save-btn:hover {
-  cursor: pointer;
-  background-color: rgb(1, 68, 1);
-}
-
 #roleId {
   width: 100px;
 }
 
 #adjust-champ-btn {
   width: 150px;
+}
+
+#delete-btn {
+  width: 150px;
+  background-color: rgb(205, 10, 10);
+  color: white;
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+#delete-btn:hover {
+  background-color: rgb(181, 8, 8);
 }
 
 /* <----------INDEX VIEWS----------> */
@@ -312,7 +327,7 @@ table:nth-child(odd){
   width: 100%;
 }
 
-/* <----------PROFILE SHOW VIEW----------> */
+/* <----------PROFILE SHOW----------> */
 #profile-header{
   display: flex;
   flex-direction: column;
@@ -338,7 +353,7 @@ table:nth-child(odd){
 
 .tooltip{
   position: fixed;
-  top: 100px;
+  top: 10px;
   right: 250px;
   border-style: solid;
   border-radius: 5px;
