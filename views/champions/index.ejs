@@ -11,12 +11,10 @@
   <div id="champ-table">
     <% champions.forEach(champion => { %>
       <table>
-        <tr>
           <th>
             <a id="table-text-left" href="/champions/<%= champion._id %>"><%= champion.name %></a>
             <a id="table-text-right" href="/profiles/<%= champion.owner._id %>"><%= champion.owner.name %></a>
           </th>
-        </tr>
       </table>
     <% }) %>
   </div>

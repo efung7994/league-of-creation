@@ -4,13 +4,15 @@
 <%- include('../partials/hamburger') %>
 
 <main id="profile-header">
-  <h1><%= profile.name %></h1>
-    <div>
-      <img
-        src="<%= profile.avatar %>"
-        alt="<%= profile.name %> avatar"
-      />
-    </div>
+  <h1>
+    <%= profile.name %>
+  </h1>
+  <div>
+    <img
+      src="<%= profile.avatar %>"
+      alt="<%= profile.name %> avatar"
+    />
+  </div>
 </main>
 <section id="profile-creations">
   <div id="profile-list">
@@ -21,7 +23,7 @@
           <a href="/champions/<%= champion._id %>"><%= champion.name %></a>
         </p>
       <% }) %>
-      </div>
+    </div>
   </div>
   <div id="profile-list">
     <h1 id="text-title">Roles</h1>
@@ -31,7 +33,7 @@
           <a href="/roles/<%= role._id %>"><%= role.name %></a>
         </p>
       <% }) %>
-      </div>
+    </div>
   </div>
 </section>
 

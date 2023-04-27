@@ -15,35 +15,35 @@
   </label>
 </div>
 
-  <section id="page-container">
-    <h1>Create A Champion</h1>
-    <form id="new-form" action="/champions" method="POST">
-      <div id="name-box">
-        <h3>Name(Required):</h3> 
-        <input id="name-input" name="name" type="text" autocomplete="off">
-      </div>
-      <div id="objects-container"> 
-        <p id="descriptor">Passive: </p>
-        <p id="description-text"><textarea name="passive" id="" cols="82" rows="10"></textarea></p>
-      </div>
-      <div id="objects-container"> 
-        <p id="descriptor">Q: </p>
-        <p id="description-text"><textarea name="ability1" id="textarea-input" cols="82" rows="10"></textarea></p>
-      </div>
-      <div id="objects-container"> 
-        <p id="descriptor">W: </p>
-        <p id="description-text"><textarea name="ability2" id="textarea-input" cols="82" rows="10"></textarea></p>
-      </div>
-      <div id="objects-container"> 
-        <p id="descriptor">E: </p>
-        <p id="description-text"><textarea name="ability3" id="textarea-input" cols="82" rows="10"></textarea></p>
-      </div>
-      <div id="objects-container"> 
-        <p id="descriptor">R: </p>
-        <p id="description-text"><textarea name="ultimate" id="textarea-input" cols="82" rows="10"></textarea></p>
-      </div>
-      <button id="save-btn" type="submit">Add champion</button>
-    </form>
-  </section>
+<section id="page-container">
+  <h1>Create A Champion</h1>
+  <form id="new-form" action="/champions" method="POST">
+    <div id="name-box">
+      <h3>Name(Required):</h3> 
+      <input id="name-input" name="name" type="text" autocomplete="off">
+    </div>
+    <div id="objects-container"> 
+      <p id="descriptor">Passive: </p>
+      <p id="description-text"><textarea name="passive" id="" cols="82" rows="10"></textarea></p>
+    </div>
+    <div id="objects-container"> 
+      <p id="descriptor">Q: </p>
+      <p id="description-text"><textarea name="ability1" id="textarea-input" cols="82" rows="10"></textarea></p>
+    </div>
+    <div id="objects-container"> 
+      <p id="descriptor">W: </p>
+      <p id="description-text"><textarea name="ability2" id="textarea-input" cols="82" rows="10"></textarea></p>
+    </div>
+    <div id="objects-container"> 
+      <p id="descriptor">E: </p>
+      <p id="description-text"><textarea name="ability3" id="textarea-input" cols="82" rows="10"></textarea></p>
+    </div>
+    <div id="objects-container"> 
+      <p id="descriptor">R: </p>
+      <p id="description-text"><textarea name="ultimate" id="textarea-input" cols="82" rows="10"></textarea></p>
+    </div>
+    <button id="save-btn" type="submit">Add champion</button>
+  </form>
+</section>
 
 <%- include('../partials/footer') %>

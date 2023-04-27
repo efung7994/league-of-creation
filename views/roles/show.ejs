@@ -5,7 +5,9 @@
 
 <section id="page-container">
   <h1><%= role.name %></h1>
-  <p>Created by: <a id="profile-link" href="/profiles/<%= role.owner._id %>"><%= role.owner.name %></a></p>
+  <p>Created by: 
+    <a id="profile-link" href="/profiles/<%= role.owner._id %>"><%= role.owner.name %></a>
+  </p>
   <div>
     <div id="objects-container"> 
       <p id="descriptor">Description: </p>
