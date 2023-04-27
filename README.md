@@ -1,6 +1,6 @@
 
 # League of Creation
-![screenshot](./public/assets/img/Screenshot%202023-04-26%20at%202.32.52%20PM.png)
+![screenshot](./public/assets/img/Screenshot%202023-04-27%20at%2010.14.00%20AM.png)
 
 ---
 # Getting Started
