@@ -6,11 +6,11 @@
 <div class="tooltip">
   Help
   <span class="tooltiptext">
+    Passive = Innate Ability <br>
     Q = First Ability <br> 
     W = Second Ability <br> 
     E = Third Ability <br> 
     R = Ultimate Ability <br>
-    "Add Champion" button below
   </span>
   </label>
 </div>
@@ -20,7 +20,7 @@
     <form id="new-form" action="/champions" method="POST">
       <div id="name-box">
         <h3>Name(Required):</h3> 
-        <input id="name-input" name="name" type="text">
+        <input id="name-input" name="name" type="text" autocomplete="off">
       </div>
       <div id="objects-container"> 
         <p id="descriptor">Passive: </p>

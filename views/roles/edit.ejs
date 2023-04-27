@@ -8,7 +8,7 @@
   <form action="/roles/<%= role._id %>?_method=PUT" method="POST">
     <div id="name-box">
       <h3>Name (Required):</h3> 
-      <input id="name-input" name="name" value="<%= role.name %>"  type="text">
+      <input id="name-input" name="name" value="<%= role.name %>"  type="text" autocomplete="off">
     </div>
     <div id="objects-container"> 
       <p id="descriptor">Description: </p>

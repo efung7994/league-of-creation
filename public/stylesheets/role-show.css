@@ -34,6 +34,8 @@
   position: absolute;
   visibility: hidden;
   top: 100%;
+  width: 200px;
+  height: 150px;
   background: darkblue;
   border-style:double ;
   color: white;
@@ -47,14 +49,9 @@
 }
 
 /* <----------POPOUT OPTIONS----------> */
-#adjust-role {
-  display: flex;
-  font-size: 20px;
-  justify-content: flex-end;
-}
 
 .edit-buttons {
-  width: 1500px;
+  width: 150px;
   height: 30px;
   border-radius: 5px;
   border-style: solid;

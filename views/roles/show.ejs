@@ -1,5 +1,5 @@
 <%- include('../partials/html-head') %>
-<link rel="stylesheet" href="/stylesheets/champion-show.css" />
+<link rel="stylesheet" href="/stylesheets/role-show.css" />
 <%- include('../partials/nav') %>
 <%- include('../partials/hamburger') %>
 
@@ -19,7 +19,7 @@
           <button class="edit-buttons" >Edit this role</button>
         </a>
         <form action="/roles/<%= role._id %>?_method=DELETE" method="POST">
-          <button class="edit-buttons" id="delete-btn" >Delete this role</button>
+          <button class="edit-buttons" id="delete-btn" >Delete</button>
         </form>
       </div>
     </div>

@@ -73,6 +73,7 @@
   border-radius: 6px;
   /* Position the tooltip text - see examples below! */
   position: absolute;
+  top:40px;
   z-index: 1;
   line-height: 2;
 }
