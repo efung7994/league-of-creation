@@ -3,8 +3,13 @@
 <%- include('../partials/nav') %>
 <%- include('../partials/hamburger') %>
 
+
+<div id="user-control">
+  <div id="create-champion-header">
+    <%= champion.name %>
+  </div>
+</div>
 <section id="page-container">
-  <h1><%= champion.name %></h1>
   <p>Created by: <a id="profile-link" href="/profiles/<%= champion.owner._id %>"><%= champion.owner.name %></a></p>
   <div id="champ-abilities">
     <div id="roles-title">

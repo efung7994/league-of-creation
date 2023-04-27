@@ -63,12 +63,13 @@ main {
   width: 85px;
   height: 30px;
   border-radius: 5px;
+  border-style: none;
+  background-color: #f6f6f6;;
 }
 
 #logout-btn:hover {
-  background-color: rgb(255, 255, 255);
-  transition: 0.5s;
   cursor: pointer;
+  text-decoration: underline;
 }
 
 /* <----------General Styling for pages----------> */
@@ -102,6 +103,7 @@ main {
   border-style: solid;
   border-radius: 10px;
   border-color: grey;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 #descriptor{

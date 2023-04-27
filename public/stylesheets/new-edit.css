@@ -1,4 +1,22 @@
 /* <----------New/Edit Views----------> */
+#user-control {
+  position: fixed;
+  transform: translateX(-50%);
+  left: 50%;
+  top: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#create-champion-header {
+  font-family: Roboto, sans-serif;
+  font-size: 40px;
+  color: black;
+  margin-left: 300px;
+  font-weight: bolder;
+}
+
 #name-input {
   width: 200px;
   margin-left: 10px;
@@ -22,15 +40,13 @@
   height: 40px;
   width: 120px;
   font-family: Roboto, sans-serif;
-  position: fixed;
-  top: 10px;
-  right: 400px;
   border-style: solid;
   border-radius: 5px;
   border-color: white;
   padding: 10px 10px 10px 10px;
   background-color: darkgreen;
   color: white;
+  margin-left: 100px;
 }
 
 #save-btn:hover {
@@ -47,9 +63,6 @@
   align-items: center;
   height: 40px;
   width: 70px;
-  position: fixed;
-  top: 10px;
-  right: 250px;
   border-style: solid;
   border-radius: 5px;
   padding: 10px 10px 10px 10px;
@@ -74,6 +87,7 @@
   /* Position the tooltip text - see examples below! */
   position: absolute;
   top:40px;
+  right: 350px;
   z-index: 1;
   line-height: 2;
 }
