@@ -84,7 +84,7 @@ function update(req, res) {
     if (role.owner.equals(req.user.profile._id)) {
       role.updateOne(req.body)
       .then(()=> {
-        res.redirect('/roles')
+        res.redirect(`/roles/${role._id}`)
       })
     } else {
       throw new Error('NOT AUTHORIZED')
