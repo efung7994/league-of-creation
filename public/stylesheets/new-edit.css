@@ -1,0 +1,78 @@
+/* <----------New/Edit Views----------> */
+#name-input {
+  width: 200px;
+  margin-left: 10px;
+}
+
+#name-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#new-form{
+  display: flex;
+  flex-direction: column;
+}
+
+#save-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 120px;
+  font-family: Roboto, sans-serif;
+  position: fixed;
+  top: 10px;
+  right: 400px;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: white;
+  padding: 10px 10px 10px 10px;
+  background-color: darkgreen;
+  color: white;
+}
+
+#save-btn:hover {
+  cursor: pointer;
+  background-color: rgb(1, 68, 1);
+}
+
+
+/* <----------TOOLTIP----------> */
+
+.tooltip{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 70px;
+  position: fixed;
+  top: 10px;
+  right: 250px;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 10px 10px 10px 10px;
+  background-color: darkblue;
+  cursor: help;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  cursor: help;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+  line-height: 2;
+}

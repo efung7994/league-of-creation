@@ -1,0 +1,15 @@
+/* <----------Landing Page----------> */
+
+#poro-sleep {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  object-position: 0px -25px;
+}
+
+#landing-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

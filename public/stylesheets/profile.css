@@ -1,0 +1,21 @@
+/* <----------PROFILE SHOW----------> */
+#profile-header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#profile-creations {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#profile-list{
+  display: flex;
+  flex-direction: column;
+}
+
+#text-title{
+  text-decoration: underline;
+}

@@ -1,0 +1,52 @@
+/* <----------INDEX VIEWS----------> */
+
+#champ-table{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  border-style:solid;
+  border-width: 5px;
+}
+
+#champ-view{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#table-header{
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+#table-text-left {
+  padding-left: 100px;
+}
+
+#table-text-right {
+  padding-right: 100px;
+}
+
+th{
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+table{
+  align-items: center;
+  padding-left: 7px;
+}
+table:nth-child(even){
+  background-color: rgb(19, 40, 194);
+  height: 50px;
+  width: 100%;
+}
+
+table:nth-child(odd){
+  background-color: rgba(12, 43, 138, 0.888);
+  height: 50px;
+  width: 100%;
+}

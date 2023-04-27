@@ -5,7 +5,6 @@ function index(req, res) {
   Role.find({})
   .populate('owner')
   .then(roles => {
-    console.log(roles);
     res.render('roles/index', {
       roles,
       title: "Roles"
