@@ -87,7 +87,6 @@
   /* Position the tooltip text - see examples below! */
   position: absolute;
   top:40px;
-  right: 350px;
   z-index: 1;
   line-height: 2;
 }
