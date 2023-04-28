@@ -18,4 +18,5 @@
 
 #text-title{
   text-decoration: underline;
+  text-underline-offset: 7px;
 }
